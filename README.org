@@ -1,3 +1,2 @@
 * Fall 2021
-
-** Code for CSCI 135000 
+  Code for CSCI 135000 
