@@ -2,5 +2,5 @@
   Code for CSCI 135000
 
 ** Important
-  ~code~ holds all .cpp files
-  ~executables~ holds the executable files that .gitignore does not catch
+  ~code~ holds all .cpp files and ~executables~ holds the executable files that
+  .gitignore does not catch
