@@ -4,6 +4,9 @@
 /*
  - cerr does not buffer and will print immediately 
  - cout has a buffer and theres a chance that it will not print due to crash
+ - you can have 2 mains while utilizing makefile
+ - libraries to support unit testing were created: search c++ doc test
+ - github.com/onqtam/doctest
 */
 
 #include <cstdio>
@@ -23,7 +26,7 @@ int main () {
 	std::cout << "this is cout\n";
 
 	#undef LOGGING
-	
+
 
 	return 0;
 }
