@@ -98,6 +98,20 @@ int nextTwinPrime(int n) {
 	return next;
 }
 
+//Task G
+int largestTwinPrime (int a, int b) {
+	int largest = -1;
+	for (int i = a; i <= b; i++) {
+		if (isTwinPrime(i)) {
+			if (i > largest) {
+				largest = i;
+			}
+		}
+	}
+
+	return largest;
+}
+
 //----------------------------------------------------------------------------------//
 
 //Main Function/Tests
@@ -150,15 +164,25 @@ int main() {
 	// (isTwinPrime(3) ? cout << "Twin Prime\n" : cout << "Not Twin Prime\n");
 
 
-	cout << "-----------TESTS FOR TASK F-----------\n";
-	cout << "\nTest with 3: "; //5
-	cout << "\nThe twin prime after 3 is " << nextTwinPrime(3);
-	cout << "\nTest with 20: "; //29
-	cout << "\nThe twin prime after 20 is " << nextTwinPrime(20);
-	cout << "\nTest with 30: ";
-	cout << "\nThe twin prime after 30 is " << nextTwinPrime(30);
-	cout << "\nTest with 15: ";
-	cout << "\nThe twin prime after 15 is " << nextTwinPrime(15) << "\n";
+	// cout << "-----------TESTS FOR TASK F-----------\n";
+	// cout << "\nTest with 3: "; //5
+	// cout << "\nThe twin prime after 3 is " << nextTwinPrime(3);
+	// cout << "\nTest with 20: "; //29
+	// cout << "\nThe twin prime after 20 is " << nextTwinPrime(20);
+	// cout << "\nTest with 30: ";
+	// cout << "\nThe twin prime after 30 is " << nextTwinPrime(30);
+	// cout << "\nTest with 15: ";
+	// cout << "\nThe twin prime after 15 is " << nextTwinPrime(15) << "\n";
+
+	cout << "-----------TESTS FOR TASK G-----------\n";
+	cout << "\nTest with range [5,18]: "; //17
+	cout << "\nThe largest twin prime in range [5,18] is: " << largestTwinPrime(5, 18);
+	cout << "\nTest with range [1,31]: "; //31
+	cout << "\nThe largest twin prime in range [1,31] is: " << largestTwinPrime(1, 31);
+	cout << "\nTest with range [14,16]: "; //-1
+	cout << "\nThe largest twin prime in range [14,16] is: " << largestTwinPrime(14, 16);
+	cout << "\n";
+	
 
 	return 0;
 }
