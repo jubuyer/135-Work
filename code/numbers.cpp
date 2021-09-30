@@ -5,7 +5,7 @@
 using std::cout;
 
 //TASK A
-bool isDivisbleby(int n, int d) {
+bool isDivisibleby(int n, int d) {
 	std::string error = "Please enter a number that is not 0. ";
 	bool divisble;
 	if (d == 0) {
@@ -33,7 +33,7 @@ bool isPrime(int n) {
 
 	//Tests if n is divisble by any number all the way to 1
 	while (tester > 1) {
-		if (isDivisbleby(n, tester-1)) {
+		if (isDivisibleby(n, tester-1)) {
 			divisble++;
 		}
 		tester--;
@@ -62,9 +62,7 @@ int nextPrime(int n) {
 int countPrimes(int a, int b) {
 	int previous = a;
 	int primes = 0;
-	// for (int x = a; x <= b; x++) {
 
-	// }
 	while (previous <= b) {
 		if (isPrime(previous))
 			primes++;
@@ -72,6 +70,18 @@ int countPrimes(int a, int b) {
 	}
 
 	return primes;
+}
+
+//Task E
+bool isTwinPrime(int n) {
+	if (n <= 2) {
+		return false;
+	} else if (isPrime(n-2) || isPrime(n + 2)) {
+		return true;
+	} else {
+		return false;
+	}
+
 }
 
 //Main Function/Tests
@@ -104,14 +114,25 @@ int main() {
 	// cout << "\nTest with 41: ";
 	// cout << "\nThe prime after 41 is " << nextPrime(41) << "\n";
 
-	cout << "-----------TESTS FOR TASK D-----------\n";
-	cout << "\nTest with range [1,4]: "; //2
-	cout << "\nThe primes in range [1,4] are: " << countPrimes(1, 4);
-	cout << "\nTest with range [1,7]: "; //4
-	cout << "\nThe primes in range [1,7] are: " << countPrimes(1, 7);
-	cout << "\nTest with range [20,45]: "; //6
-	cout << "\nThe primes in range [20,45] are: " << countPrimes(20, 45);
-	cout << "\n";
+	// cout << "-----------TESTS FOR TASK D-----------\n";
+	// cout << "\nTest with range [1,4]: "; //2
+	// cout << "\nThe primes in range [1,4] are: " << countPrimes(1, 4);
+	// cout << "\nTest with range [1,7]: "; //4
+	// cout << "\nThe primes in range [1,7] are: " << countPrimes(1, 7);
+	// cout << "\nTest with range [20,45]: "; //6
+	// cout << "\nThe primes in range [20,45] are: " << countPrimes(20, 45);
+	// cout << "\n";
+
+	cout << "-----------TESTS FOR TASK E-----------\n";
+	cout << "Test with 1: "; //false
+	(isTwinPrime(1) ? cout << "Twin Prime\n" : cout << "Not Twin Prime\n");
+	cout << "Test with 14: "; //false
+	(isTwinPrime(14) ? cout << "Twin Prime\n" : cout << "Not Twin Prime\n");
+	cout << "Test with 5: "; //true
+	(isTwinPrime(5) ? cout << "Twin Prime\n" : cout << "Not Twin Prime\n");
+	cout << "Test with 3: "; //true
+	(isTwinPrime(3) ? cout << "Twin Prime\n" : cout << "Not Twin Prime\n");
+
 
 	return 0;
 }
