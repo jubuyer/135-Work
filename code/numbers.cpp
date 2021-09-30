@@ -76,13 +76,29 @@ int countPrimes(int a, int b) {
 bool isTwinPrime(int n) {
 	if (n <= 2) {
 		return false;
+	} else if (!isPrime(n)) {
+		return false;
 	} else if (isPrime(n-2) || isPrime(n + 2)) {
 		return true;
 	} else {
 		return false;
+		}
+}
+
+//Task F
+int nextTwinPrime(int n) {
+	int temp = 1;
+
+	while (!isTwinPrime(n + temp)) {
+		temp++;
 	}
 
+	int next = n + temp;
+
+	return next;
 }
+
+//----------------------------------------------------------------------------------//
 
 //Main Function/Tests
 int main() {
@@ -123,16 +139,26 @@ int main() {
 	// cout << "\nThe primes in range [20,45] are: " << countPrimes(20, 45);
 	// cout << "\n";
 
-	cout << "-----------TESTS FOR TASK E-----------\n";
-	cout << "Test with 1: "; //false
-	(isTwinPrime(1) ? cout << "Twin Prime\n" : cout << "Not Twin Prime\n");
-	cout << "Test with 14: "; //false
-	(isTwinPrime(14) ? cout << "Twin Prime\n" : cout << "Not Twin Prime\n");
-	cout << "Test with 5: "; //true
-	(isTwinPrime(5) ? cout << "Twin Prime\n" : cout << "Not Twin Prime\n");
-	cout << "Test with 3: "; //true
-	(isTwinPrime(3) ? cout << "Twin Prime\n" : cout << "Not Twin Prime\n");
+	// cout << "-----------TESTS FOR TASK E-----------\n";
+	// cout << "Test with 1: "; //false
+	// (isTwinPrime(1) ? cout << "Twin Prime\n" : cout << "Not Twin Prime\n");
+	// cout << "Test with 14: "; //false
+	// (isTwinPrime(14) ? cout << "Twin Prime\n" : cout << "Not Twin Prime\n");
+	// cout << "Test with 5: "; //true
+	// (isTwinPrime(5) ? cout << "Twin Prime\n" : cout << "Not Twin Prime\n");
+	// cout << "Test with 3: "; //true
+	// (isTwinPrime(3) ? cout << "Twin Prime\n" : cout << "Not Twin Prime\n");
 
+
+	cout << "-----------TESTS FOR TASK F-----------\n";
+	cout << "\nTest with 3: "; //5
+	cout << "\nThe twin prime after 3 is " << nextTwinPrime(3);
+	cout << "\nTest with 20: "; //29
+	cout << "\nThe twin prime after 20 is " << nextTwinPrime(20);
+	cout << "\nTest with 30: ";
+	cout << "\nThe twin prime after 30 is " << nextTwinPrime(30);
+	cout << "\nTest with 15: ";
+	cout << "\nThe twin prime after 15 is " << nextTwinPrime(15) << "\n";
 
 	return 0;
 }
