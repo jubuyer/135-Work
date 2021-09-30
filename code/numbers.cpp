@@ -61,7 +61,16 @@ int nextPrime(int n) {
 	return next;
 }
 
-int main () {
+//Task D
+int countPrimes(int a, int b) {
+	int previous;
+	for (int x = a; x <= b; x++) {
+
+	}
+}
+
+//Main Function/Tests
+int main() {
 	// cout << "-----------TESTS FOR TASK A-----------\n";
 	// cout << "Test with 4 and 2: ";
 	// (isDivisbleby(4,2) ? cout << "Divisble\n" : cout << "Not divisible\n");
