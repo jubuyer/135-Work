@@ -59,12 +59,20 @@ int nextPrime(int n) {
 }
 
 //Task D
-// int countPrimes(int a, int b) {
-// 	int previous;
-// 	for (int x = a; x <= b; x++) {
+int countPrimes(int a, int b) {
+	int previous = a;
+	int primes = 0;
+	// for (int x = a; x <= b; x++) {
 
-// 	}
-// }
+	// }
+	while (previous <= b) {
+		if (isPrime(previous))
+			primes++;
+		previous++;
+	}
+
+	return primes;
+}
 
 //Main Function/Tests
 int main() {
@@ -86,14 +94,24 @@ int main() {
 	// cout << "Test with 41: ";
 	// (isPrime(41) ? cout << "Prime\n" : cout << "Not Prime\n");
 
-	cout << "-----------TESTS FOR TASK C-----------\n";
-	cout << "\nTest with 3: ";
-	cout << "\nThe prime after 3 is " << nextPrime(3);
-	cout << "\nTest with 19: ";
-	cout << "\nThe prime after 19 is " << nextPrime(19);
-	cout << "\nTest with 20: ";
-	cout << "\nThe prime after 20 is " << nextPrime(20);
-	cout << "\nTest with 41: ";
-	cout << "\nThe prime after 41 is " << nextPrime(41) << "\n";
+	// cout << "-----------TESTS FOR TASK C-----------\n";
+	// cout << "\nTest with 3: ";
+	// cout << "\nThe prime after 3 is " << nextPrime(3);
+	// cout << "\nTest with 19: ";
+	// cout << "\nThe prime after 19 is " << nextPrime(19);
+	// cout << "\nTest with 20: ";
+	// cout << "\nThe prime after 20 is " << nextPrime(20);
+	// cout << "\nTest with 41: ";
+	// cout << "\nThe prime after 41 is " << nextPrime(41) << "\n";
+
+	cout << "-----------TESTS FOR TASK D-----------\n";
+	cout << "\nTest with range [1,4]: "; //2
+	cout << "\nThe primes in range [1,4] are: " << countPrimes(1, 4);
+	cout << "\nTest with range [1,7]: "; //4
+	cout << "\nThe primes in range [1,7] are: " << countPrimes(1, 7);
+	cout << "\nTest with range [20,45]: "; //6
+	cout << "\nThe primes in range [20,45] are: " << countPrimes(20, 45);
+	cout << "\n";
+
 	return 0;
 }
