@@ -176,13 +176,13 @@ int main() {
 
 	cout << "-----------TESTS FOR TASK G-----------\n";
 	cout << "\nTest with range [5,18]: "; //17
-	cout << "\nThe largest twin prime in range [5,18] is: " << largestTwinPrime(5, 18);
+	cout << "\nLargest twin prime in range [5,18]: " << largestTwinPrime(5, 18);
 	cout << "\nTest with range [1,31]: "; //31
-	cout << "\nThe largest twin prime in range [1,31] is: " << largestTwinPrime(1, 31);
+	cout << "\nLargest twin prime in range [1,31]: " << largestTwinPrime(1, 31);
 	cout << "\nTest with range [14,16]: "; //-1
-	cout << "\nThe largest twin prime in range [14,16] is: " << largestTwinPrime(14, 16);
+	cout << "\nLargest twin prime in range [14,16]: " << largestTwinPrime(14, 16);
 	cout << "\n";
-	
+
 
 	return 0;
 }
