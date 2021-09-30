@@ -49,25 +49,22 @@ int nextPrime(int n) {
 	int temp = 1;
 	int next = 0;
 
-	while(true) {
-		if (isPrime(n + temp)) {
-			next = n + temp;
-			return next;
-		} else {
-			temp++;
-		}
+	while(!isPrime(n+temp)) {
+		temp++;
 	}
+
+	next = n + temp;
 
 	return next;
 }
 
 //Task D
-int countPrimes(int a, int b) {
-	int previous;
-	for (int x = a; x <= b; x++) {
+// int countPrimes(int a, int b) {
+// 	int previous;
+// 	for (int x = a; x <= b; x++) {
 
-	}
-}
+// 	}
+// }
 
 //Main Function/Tests
 int main() {
@@ -90,8 +87,8 @@ int main() {
 	// (isPrime(41) ? cout << "Prime\n" : cout << "Not Prime\n");
 
 	cout << "-----------TESTS FOR TASK C-----------\n";
-	cout << "\nTest with 2: ";
-	cout << "\nThe prime after 2 is " << nextPrime(2);
+	cout << "\nTest with 3: ";
+	cout << "\nThe prime after 3 is " << nextPrime(3);
 	cout << "\nTest with 19: ";
 	cout << "\nThe prime after 19 is " << nextPrime(19);
 	cout << "\nTest with 20: ";
