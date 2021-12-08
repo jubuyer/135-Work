@@ -2,9 +2,9 @@
   Code for CSCI 135000
 
 ** Important
-  ~code~ holds all .cpp files and ~executables~ holds the executable files that
-  ~.gitignore~ does not catch
+~code~ holds all .cpp files and ~executables~ holds the executable files that ~.gitignore~ does not catch
 
+*** Code Directory
 - ~Lecture Exercises~ directory contains all E_ exercises for main lecture
 - ~Lab Quizzes~ directory contains all lab quizzes  
 - ~Midterm 2021~ directory contains just the midterm and the midterm with a graded answer key
