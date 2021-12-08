@@ -3,4 +3,8 @@
 
 ** Important
   ~code~ holds all .cpp files and ~executables~ holds the executable files that
-  .gitignore does not catch
+  ~.gitignore~ does not catch
+
+- ~Lecture Exercises~ directory contains all E_ exercises for main lecture
+- ~Lab Quizzes~ directory contains all lab quizzes  
+- ~Midterm 2021~ directory contains just the midterm and the midterm with a graded answer key
