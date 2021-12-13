@@ -1,5 +1,8 @@
 * Fall 2021
   Code for CSCI 135000
+  
+** Also important
+  Programs and code here are for guidance and documentation, not for cheating 
 
 ** Important
 ~code~ holds all .cpp files and ~executables~ holds the executable files that ~.gitignore~ does not catch
